@@ -1,14 +1,14 @@
 import { StyleSheet, Text, View, TextInput, Button} from "react-native";
 import React from "react";
 
-export default function RegisterScreen() {
+export default function RegisterScreen({navigation}) {
   return (
     <View style={styles.container}>
       <TextInput style={styles.input} placeholder="Adınız" />
       <TextInput style={styles.input} placeholder="Soyadınız" />
       <TextInput style={styles.input} placeholder="E-Mail" />
       <TextInput style={styles.input} placeholder="Şifre" />
-      <Button style={styles.btn} title="Kayıt Ol"/>
+      <Button style={styles.btn} title="Kayıt Ol" onPress={()=> navigation.navigate('Sign')}/>
     </View>
   );
 }
