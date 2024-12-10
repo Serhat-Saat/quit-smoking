@@ -1,14 +1,23 @@
 import { StyleSheet, Text, View, TextInput, Button } from "react-native";
-import React from "react";
+import React, { useState } from "react";
 
-export default function SigninScreen({navigation}) {
+export default function SigninScreen({ navigation }) {
   return (
     <View style={styles.container}>
       <TextInput style={styles.input} placeholder="Email" />
       <TextInput style={styles.input} placeholder="Şifre" />
+
       <View style={styles.btncontainer}>
-      <Button style={styles.button} title="Giriş Yap"onPress={()=> navigation.navigate('Current')} />
-      <Button style={styles.button} title="Kayıt Ol"onPress={()=> navigation.navigate('Register')} />
+        <Button
+          style={styles.button}
+          title="Giriş Yap"
+          onPress={() => navigation.navigate("Current")}
+        />
+        <Button
+          style={styles.button}
+          title="Kayıt Ol"
+          onPress={() => navigation.navigate("Register")}
+        />
       </View>
     </View>
   );
@@ -16,21 +25,19 @@ export default function SigninScreen({navigation}) {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 0.7,
     justifyContent: "center",
     alignItems: "center",
   },
   input: {
-    width:"80%",
-    padding:5,
+    width: "80%",
+    padding: 5,
     borderWidth: 0.5,
-    marginTop:8
+    marginTop: 8,
   },
-  btncontainer:{
-    flex:0.05,
-    flexDirection:"row",
-    marginTop:8,
+  btncontainer: {
+    flexDirection: "row",
+    marginTop: 8,
   },
-  button:{
-  }
+  button: {},
 });
